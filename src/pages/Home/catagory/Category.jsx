@@ -1,24 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import NewsCard from "../newsCart/NewsCard";
 
 const Category = () => {
-  /*   const { id } = useParams();
-  const newId = Number(id);
-  const [newsCategory, setNewsCategory] = useState();
-
-  useEffect(() => {
-    fetch(`http://localhost:5000/categories/${newId}`)
-      .then((res) => res.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.log(error));
-  }, []); */
+  const { id } = useParams();
 
   const categoryNews = useLoaderData();
 
   return (
     <div>
-      <h3>Total news on this category: {categoryNews.length}</h3>
+      {id && <h3>Total news on this category: {categoryNews.length}</h3>}
       {categoryNews.map((news) => (
         <NewsCard key={news._id} news={news}></NewsCard>
       ))}
