@@ -4,11 +4,12 @@ import moment from "moment/moment";
 import { Button } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
+import { CgProfile } from "react-icons/cg";
 
 const Header = () => {
   return (
     <div>
-      <div className="text-center my-4">
+      <div className=" text-center my-4">
         <img src={logo} alt="" />
         <h5>Journalism Without Fear or Favour</h5>
         <span>{moment().format("dddd, MMMM D, YYYY")}</span>
@@ -27,6 +28,7 @@ const Header = () => {
           <Link className="text-decoration-none text-black mx-3">Career</Link>
         </div>
         <div>
+          <CgProfile className="fs-1 me-3" />
           <Button variant="dark">Login</Button>
         </div>
       </div>
