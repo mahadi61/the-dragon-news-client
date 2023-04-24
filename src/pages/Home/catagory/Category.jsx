@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import NewsCard from "../newsCart/NewsCard";
 
 const Category = () => {
   /*   const { id } = useParams();
@@ -15,7 +16,14 @@ const Category = () => {
 
   const categoryNews = useLoaderData();
 
-  return <div>All news category: {categoryNews.length}</div>;
+  return (
+    <div>
+      <h3>All news category: {categoryNews.length}</h3>
+      {categoryNews.map((news) => (
+        <NewsCard key={news._id} news={news}></NewsCard>
+      ))}
+    </div>
+  );
 };
 
 export default Category;
