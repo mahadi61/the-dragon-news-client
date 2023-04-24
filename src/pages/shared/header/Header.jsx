@@ -9,8 +9,8 @@ import { CgProfile } from "react-icons/cg";
 const Header = () => {
   return (
     <div>
-      <div className=" text-center my-4">
-        <img src={logo} alt="" />
+      <div className="text-center my-4 ">
+        <img src={logo} className="img-fluid" alt="" />
         <h5>Journalism Without Fear or Favour</h5>
         <span>{moment().format("dddd, MMMM D, YYYY")}</span>
       </div>

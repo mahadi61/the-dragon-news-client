@@ -14,7 +14,7 @@ const Main = () => {
           <Col sm={3}>
             <LeftNavbar></LeftNavbar>
           </Col>
-          <Col sm={6}>Main area .......</Col>
+          <Col sm={6}>Dragon News Home. Coming soon.....</Col>
           <Col sm={3}>
             <RightNavbar></RightNavbar>
           </Col>

@@ -2,6 +2,8 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { BsGithub, BsGoogle } from "react-icons/bs";
 import SocialLink from "../../socialLink/SocialLink";
+import QuizZone from "../quiz/QuizZone";
+import CreateNewsPaper from "../createNewspaper/CreateNewsPaper";
 
 const RightNavbar = () => {
   return (
@@ -18,6 +20,12 @@ const RightNavbar = () => {
 
       <div className="border mt-3 py-4 px-3">
         <SocialLink></SocialLink>
+      </div>
+      <div>
+        <QuizZone></QuizZone>
+      </div>
+      <div>
+        <CreateNewsPaper></CreateNewsPaper>
       </div>
     </div>
   );
