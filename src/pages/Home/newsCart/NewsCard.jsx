@@ -1,7 +1,9 @@
 import moment from "moment";
 import React from "react";
 import { Card, Image } from "react-bootstrap";
-import { BsBookmark, BsShare } from "react-icons/bs";
+import { BsBookmark, BsShare, BsStar, BsStarFill } from "react-icons/bs";
+import { FaEye } from "react-icons/fa";
+import Rating from "react-rating";
 import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
@@ -45,7 +47,21 @@ const NewsCard = ({ news }) => {
         </Card.Text>
       </Card.Body>
       <hr className="mx-3" />
-      <div></div>
+      <div className="d-flex mb-2 mx-3">
+        <div className="flex-grow-1 ">
+          <Rating
+            placeholderRating={rating.number}
+            readonly
+            emptySymbol={<BsStar />}
+            placeholderSymbol={<BsStarFill className="text-warning" />}
+            fullSymbol={<BsStarFill />}
+          />
+          <span className="ms-1">{rating.number}</span>
+        </div>
+        <div className="fs-5">
+          <FaEye></FaEye> {total_view}
+        </div>
+      </div>
     </Card>
   );
 };
