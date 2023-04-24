@@ -13,21 +13,21 @@ const Header = () => {
         <h5>Journalism Without Fear or Favour</h5>
         <span>{moment().format("dddd, MMMM D, YYYY")}</span>
       </div>
-      <div className="px-3 my-3 d-flex">
+      <div className="bg-secondary text-white my-3 d-flex">
         <Button variant="primary">Latest</Button>
-        <Marquee speed={50}>
-          I can be a React component, multiple React components, or just some
-          text.
+        <Marquee pauseOnHover speed={50}>
+          Match Highlights: Germany vs Spain — as it happened ! Match
+          Highlights: Germany vs Spain as...
         </Marquee>
       </div>
       <div className="d-flex justify-content-between">
         <div className="mx-auto">
-          <Link className="mx-3">Home</Link>
-          <Link className="mx-3">About</Link>
-          <Link className="mx-3">Career</Link>
+          <Link className="text-decoration-none text-black mx-3">Home</Link>
+          <Link className="text-decoration-none text-black mx-3">About</Link>
+          <Link className="text-decoration-none text-black mx-3">Career</Link>
         </div>
         <div>
-          <Button variant="dark">Dark</Button>
+          <Button variant="dark">Login</Button>
         </div>
       </div>
     </div>
