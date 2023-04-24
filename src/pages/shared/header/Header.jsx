@@ -20,7 +20,10 @@ const Header = () => {
       </div>
       <div className="d-flex justify-content-between">
         <div className="mx-auto">
-          <Link to="/" className="text-decoration-none text-black mx-3">
+          <Link
+            to={`/category/0`}
+            className="text-decoration-none text-black mx-3"
+          >
             Home
           </Link>
           <Link className="text-decoration-none text-black mx-3">About</Link>
