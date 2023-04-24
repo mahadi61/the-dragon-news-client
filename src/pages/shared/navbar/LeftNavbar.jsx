@@ -19,7 +19,10 @@ const LeftNavbar = () => {
         <h4>All Category</h4>
         {categories.map((category) => (
           <p key={category.id}>
-            <Link className="text-decoration-none text-black mx-3">
+            <Link
+              to={`/category/${category.id}`}
+              className="text-decoration-none text-black mx-3"
+            >
               {category.name}
             </Link>
           </p>

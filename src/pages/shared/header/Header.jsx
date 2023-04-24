@@ -1,18 +1,15 @@
 import React from "react";
-import logo from "../../../assets/logo.png";
-import moment from "moment/moment";
 import { Button } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
+import HeaderTop from "./HeaderTop";
 
 const Header = () => {
   return (
     <div>
-      <div className="text-center my-4 ">
-        <img src={logo} className="img-fluid" alt="" />
-        <h5>Journalism Without Fear or Favour</h5>
-        <span>{moment().format("dddd, MMMM D, YYYY")}</span>
+      <div>
+        <HeaderTop></HeaderTop>
       </div>
       <div className="bg-secondary text-white my-3 d-flex">
         <Button variant="primary">Latest</Button>
@@ -23,7 +20,9 @@ const Header = () => {
       </div>
       <div className="d-flex justify-content-between">
         <div className="mx-auto">
-          <Link className="text-decoration-none text-black mx-3">Home</Link>
+          <Link to="/" className="text-decoration-none text-black mx-3">
+            Home
+          </Link>
           <Link className="text-decoration-none text-black mx-3">About</Link>
           <Link className="text-decoration-none text-black mx-3">Career</Link>
         </div>
