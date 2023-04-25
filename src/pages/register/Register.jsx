@@ -2,7 +2,6 @@ import React from "react";
 import HeaderNav from "../shared/header/HeaderNav";
 import { Button, Container } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
-import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
@@ -53,14 +52,6 @@ const Register = () => {
         <Button className="w-100 fw-bold mt-4" variant="secondary">
           Register
         </Button>
-        <div className="text-center mt-3">
-          <span>
-            Don’t Have An Account ?{" "}
-            <Link to="/register" className=" text-danger fw-bold">
-              Register
-            </Link>
-          </span>
-        </div>
       </Form>
     </Container>
   );
