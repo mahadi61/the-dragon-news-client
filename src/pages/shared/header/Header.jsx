@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import HeaderTop from "./HeaderTop";
+import { AuthContext } from "../../../providers/AuthProviders";
+import HeaderNav from "./HeaderNav";
 
 const Header = () => {
+  const { currentUser } = useContext(AuthContext);
+  console.log(currentUser);
   return (
     <div>
       <div>
@@ -18,21 +22,8 @@ const Header = () => {
           Highlights: Germany vs Spain as...
         </Marquee>
       </div>
-      <div className="d-flex justify-content-between">
-        <div className="mx-auto">
-          <Link
-            to={`/category/0`}
-            className="text-decoration-none text-black mx-3"
-          >
-            Home
-          </Link>
-          <Link className="text-decoration-none text-black mx-3">About</Link>
-          <Link className="text-decoration-none text-black mx-3">Career</Link>
-        </div>
-        <div>
-          <CgProfile className="fs-1 me-3" />
-          <Button variant="dark">Login</Button>
-        </div>
+      <div>
+        <HeaderNav></HeaderNav>
       </div>
     </div>
   );
