@@ -14,13 +14,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Category></Category>,
-        loader: () => fetch(`http://localhost:5000/categories/0`),
+        loader: () =>
+          fetch(
+            `https://the-dragon-news-server-mahadi61.vercel.app/categories/0`
+          ),
       },
       {
         path: "/category/:id",
         element: <Category></Category>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/categories/${params.id}`),
+          fetch(
+            `https://the-dragon-news-server-mahadi61.vercel.app/categories/${params.id}`
+          ),
       },
     ],
   },
@@ -32,7 +37,9 @@ const router = createBrowserRouter([
         path: ":id",
         element: <News></News>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/news/${params.id}`),
+          fetch(
+            `https://the-dragon-news-server-mahadi61.vercel.app/news/${params.id}`
+          ),
       },
     ],
   },
